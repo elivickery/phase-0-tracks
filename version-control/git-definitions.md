@@ -2,6 +2,7 @@
 
 **Instructions: ** Define each of the following Git concepts.
 
+
 * What is version control?  Why is it useful?
 Version control allows you to save snapshots of files as you work on them to create a progressive history of your work, so you don't permanently delete any code that you may decide you need later in your project.
 * What is a branch and why would you use one?
