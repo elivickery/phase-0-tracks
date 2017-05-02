@@ -1,0 +1,26 @@
+#contact-info {
+    font-size:.8em;
+}
+
+.job {
+    background-color:#e9e5dc;
+    border-radius:5px;
+    padding:1em;
+    margin-bottom:10px;
+}
+
+.job:hover {
+    background-color:red;
+    color:#fff;
+}
+
+.list {
+    font-size:.8em;
+}
+
+#personal-objective > h2 {
+    border: 1px solid #000;
+    padding: 4px;
+}
+
+
