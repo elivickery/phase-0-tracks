@@ -1,0 +1,21 @@
+#octopus {
+    position: relative;
+    margin-left: 565px;
+    margin-top: 130px;
+    z-index: 1;
+    margin-right: 565px;
+}
+
+#glasses {
+    position: absolute;
+    left: 615px;
+    top: 238px;
+    z-index: 2;
+}
+
+#hat {
+    position: absolute;
+    left: 550px;
+    top: 65px;
+    z-index: 3;
+}
