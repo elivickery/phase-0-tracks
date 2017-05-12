@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background: #008080;
+  color: #fff;
+}
+
+header h1 {
+  text-transform: uppercase;
+  padding: 10px 10px 0 10px;
+}
+
+header img {
+  margin-left: 10px;
+}
+
+header p {
+  padding: 10px;
+  background: rgba(255,255,255,0.5);
+}
+
+section {
+  width: 48%;
+  display: inline-block;
+  vertical-align: text-top;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+footer {
+  background: #008080;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
