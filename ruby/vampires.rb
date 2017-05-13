@@ -24,22 +24,32 @@ def vampire_detector
         puts "Would you like to enroll in the company’s health insurance? (Y/N)"
         insurance = gets.chomp.upcase
 
-        result = "Results inconclusive."
-
-        if (name == 'Drake Cula' || name == "Tu Fang")
-            result = "Definitely a vampire."
+        puts "What allergies do you have? (Type 'done' when finished listing allergies)"
+        allergies = ''
+        while allergies.downcase != "sunshine" && allergies.downcase != 'done'
+            allergies = gets.chomp
         end
 
-        if age == birth_year_age && (garlic == 'Y' || insurance == 'Y')
-            result = "Probably not a vampire."
-        end
-
-        if age != birth_year_age && (garlic == 'N' || insurance == 'N')
+        if allergies == 'sunshine'
             result = "Probably a vampire."
-        end
+        else
+            result = "Results inconclusive."
 
-        if age != birth_year_age && garlic == 'N' && insurance == 'N'
-            result = "Almost certainly a vampire."
+            if (name == 'Drake Cula' || name == "Tu Fang")
+                result = "Definitely a vampire."
+            end
+
+            if age == birth_year_age && (garlic == 'Y' || insurance == 'Y')
+                result = "Probably not a vampire."
+            end
+
+            if age != birth_year_age && (garlic == 'N' || insurance == 'N')
+                result = "Probably a vampire."
+            end
+
+            if age != birth_year_age && garlic == 'N' && insurance == 'N'
+                result = "Almost certainly a vampire."
+            end
         end
 
         puts result
