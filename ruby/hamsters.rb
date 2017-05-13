@@ -22,6 +22,19 @@ def hamster_info
         hamster_age = nil
     end
 
+    puts "The hamster's name is " + hamster_name
+    puts "The hamster's volume is " + hamster_volume.to_s
+    puts "The hamster's color is " + hamster_color
+    if adoption_fitness == true
+        puts "The hamster is a good fit for adoption"
+    else
+        puts "The hamster is not a good fit for adoption"
+    end
+
+    if hamster_age != nil
+        puts "The hamster's age is " + hamster_age.to_s
+    end
+
 end
 
 print hamster_info
