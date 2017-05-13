@@ -17,7 +17,7 @@ def hamster_info
     end
 
     puts "How old is the hamster?"
-    hamster_age = gets.chomp
+    hamster_age = gets.chomp.to_f
     if hamster_age == ''
         hamster_age = nil
     end
