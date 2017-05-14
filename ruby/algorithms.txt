@@ -1,0 +1,25 @@
+# Making a PB&J
+- Open pantry door
+- For each of these ingredients - bread, peanut butter, jelly:
+    - Check if it is in pantry
+    - If it is in pantry:
+        - Remove from pantry
+        - Place on counter
+        - Remove lid
+    - Else move on to the next ingredient
+- Close pantry door
+- Open silverware drawer
+- If knife is in drawer
+    - Remove and place on counter
+- Open bread package and take out one slice of bread
+- Pick up knife
+- For each of these ingredients - peanut butter, jelly:
+    - Stick knife in condiment jar and scoop out condiment
+    - Spread condiment on bread
+    - Close condiment jar
+    - Return to pantry
+- Place knife on counter
+- Take out another slice of bread
+- Put slice of bread on top of the other slice
+- Close bread package and return to pantry
+- Wash knife
