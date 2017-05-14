@@ -35,10 +35,6 @@ def vampire_detector
         else
             result = "Results inconclusive."
 
-            if (name == 'Drake Cula' || name == "Tu Fang")
-                result = "Definitely a vampire."
-            end
-
             if age == birth_year_age && (garlic == 'Y' || insurance == 'Y')
                 result = "Probably not a vampire."
             end
@@ -49,6 +45,10 @@ def vampire_detector
 
             if age != birth_year_age && garlic == 'N' && insurance == 'N'
                 result = "Almost certainly a vampire."
+            end
+
+            if (name == 'Drake Cula' || name == "Tu Fang")
+                result = "Definitely a vampire."
             end
         end
 
