@@ -28,7 +28,7 @@ puts "The case of the disappearing last letter".chop
 puts "The mystery of the missing first letter"[1..-1]
 # => "he mystery of the missing first letter"
 
-puts "Elementary,    my   dear        Watson!".gsub('    ',' ').gsub('        ',' ').gsub('   ',' ').gsub('  ',' ')
+puts "Elementary,    my   dear        Watson!".tr_s(' ',' ')
 # => "Elementary, my dear Watson!"
 
 puts "z".ord
