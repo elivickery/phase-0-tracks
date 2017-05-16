@@ -10,23 +10,23 @@ def gather_info
 	# Get client info
 	puts "Client Name:"
 
-	client_info["name"] = gets.chomp.to_s
+	client_info[:name] = gets.chomp.to_s
 
 	puts "Client Age:"
 
-	client_info["age"] = gets.chomp.to_i
+	client_info[:age] = gets.chomp.to_i
 
 	puts "Number of Children:"
 
-	client_info["children"] = gets.chomp.to_i
+	client_info[:children] = gets.chomp.to_i
 
 	puts "Decor theme:"
 
-	client_info['theme'] = gets.chomp.to_s
+	client_info[:theme] = gets.chomp.to_s
 
 	puts "Favorite color:"
 
-	client_info['fav_color'] = gets.chomp.to_s
+	client_info[:fav_color] = gets.chomp.to_s
 
 	# Print all hash key/values
 	puts client_info
@@ -41,13 +41,13 @@ def gather_info
 
 		#Get key
 		puts "Which item needs to be updated?"
-		new_key = gets.chomp	
+		new_key = gets.chomp.to_sym
 		
 		#Check whether key exists
 		if client_info[new_key]
 			# Get new value of key
 			puts "New value:"
-			new_value = gets.chomp	
+			new_value = gets.chomp
 
 			# Update key/value pair
 			client_info[new_key] = new_value
