@@ -1,39 +1,41 @@
-# def print_some_parameters
-# 	puts "Hello, world!"
-# 	yield("Hello", "World")
-# end
+def print_some_parameters
+	puts "Hello, world!"
+	yield("Hello", "World")
+end
 
-# print_some_parameters{|parameter1, parameter2| puts "What an awesome method! Here are our two parameters: #{parameter1} and #{parameter2}."}
-
-# animals = ["cat", "dog", "elephant", "zebra"]
-
-# favorite_colors = {:Joe => "blue", :Zelda => "red", :Caroline => "green"}
-
-# p animals
-# p favorite_colors
+print_some_parameters{|parameter1, parameter2| puts "What an awesome method! Here are our two parameters: #{parameter1} and #{parameter2}."}
 
 
-# # Using .each
-# animals.each do |animal|
-# 	puts "A #{animal} is an animal."
-# end
+animals = ["cat", "dog", "elephant", "zebra"]
+favorite_colors = {:Joe => "blue", :Zelda => "red", :Caroline => "green"}
 
-# p animals
-
-# # Using .each
-# favorite_colors.each do |person, fav_color|
-# 	puts "#{person}'s favorite color is #{fav_color}."
-# end
-
-# p favorite_colors
+p animals
+p favorite_colors
 
 
-# # Using .map!
-# animals.map! do |animal|
-# 	animal = animal.upcase
-# end
+# Using .each
+animals.each do |animal|
+	puts "A #{animal} is an animal."
+end
 
-# p animals
+p animals
+
+# Using .each
+favorite_colors.each do |person, fav_color|
+	puts "#{person}'s favorite color is #{fav_color}."
+end
+
+p favorite_colors
+
+
+# Using .map!
+animals.map! do |animal|
+	animal = animal.upcase
+end
+
+p animals
+
+#Trying out some methods
 
 numbers = [500,6,12,8,16,121,21,17]
 more_favorite_colors = { :Joe => "blue", :Zelda => "red", :Caroline => "pink", :Jenna => "orange", :Jennifer => "blue", :Mitch => "green", :Eli => "blue"}
