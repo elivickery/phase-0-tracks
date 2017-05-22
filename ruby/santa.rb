@@ -1,7 +1,7 @@
 class Santa
 
-	attr_reader :age, :ethnicity
-	attr_accessor :gender
+	attr_reader :ethnicity
+	attr_accessor :age, :gender
 
 	def initialize(gender, ethnicity)
 		@gender = gender
@@ -30,11 +30,15 @@ class Santa
 
 end
 
-genders = ["genderqueer", "male", "female", "agender","multi-gender"]
-ethnicities = ["multiracial","black","caucasian","latino","chinese"]
-genders.length.times do |i|
-  puts "Santa ##{i}:"
-  santa = Santa.new(genders[i], ethnicities[i])
+
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese","multiracial"]
+
+100.times do |i|
+  puts "Santa ##{i+1}:"
+  santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+
+  santa.age = rand(0..140)
 
   puts "This Santa is #{santa.gender} and #{santa.ethnicity}."
   if(i % 2 == 0)
@@ -43,7 +47,7 @@ genders.length.times do |i|
   end
 
   if(i % 3 == 0)
-  	santa.gender = genders.sample
+  	santa.gender = example_genders.sample
   	puts "Santa is now #{santa.gender}. We support your transition, Santa!"
   end
 
