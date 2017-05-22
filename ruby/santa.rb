@@ -40,7 +40,7 @@ example_ethnicities = ["black", "Latino", "white", "Japanese","multiracial"]
 
   santa.age = rand(0..140)
 
-  puts "This Santa is #{santa.gender} and #{santa.ethnicity}."
+  puts "This Santa is #{santa.gender} and #{santa.ethnicity}, and they are #{santa.age} years old."
   if(i % 2 == 0)
   	santa.celebrate_birthday
   	puts "Santa just turned a year older...now they are #{santa.age}!"
