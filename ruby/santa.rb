@@ -1,5 +1,8 @@
 class Santa
 
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
+
 	def initialize(gender, ethnicity)
 		@gender = gender
 		@ethnicity = ethnicity
@@ -25,22 +28,6 @@ class Santa
 		@reindeer_ranking.insert(-1, @reindeer_ranking.delete_at(@reindeer_ranking.index(reindeer_name)))
 	end
 
-	def gender
-		@gender
-	end
-
-	def gender=(new_gender)
-		@gender = new_gender
-	end
-
-	def age
-		@age
-	end
-
-	def ethnicity
-		@ethnicity
-	end
-
 end
 
 genders = ["genderqueer", "male", "female", "agender","multi-gender"]
@@ -49,7 +36,7 @@ genders.length.times do |i|
   puts "Santa ##{i}:"
   santa = Santa.new(genders[i], ethnicities[i])
 
-  puts "This Santa is #{santa.age} and #{santa.ethnicity}."
+  puts "This Santa is #{santa.gender} and #{santa.ethnicity}."
   if(i % 2 == 0)
   	santa.celebrate_birthday
   	puts "Santa just turned a year older...now they are #{santa.age}!"
