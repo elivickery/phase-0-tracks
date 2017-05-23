@@ -1,44 +1,44 @@
-# class Puppy
+class Puppy
 
-#   def initialize
-#       puts "Initialize new puppy instance..."
-#   end
+  def initialize
+      puts "Initialize new puppy instance..."
+  end
 
-#   def fetch(toy)
-#     puts "I brought back the #{toy}!"
-#     toy
-#   end
+  def fetch(toy)
+    puts "I brought back the #{toy}!"
+    toy
+  end
 
-#   def speak(x)
-#     x.to_i.times { |x| puts "woof"}
-#   end
+  def speak(x)
+    x.to_i.times { |x| puts "woof"}
+  end
 
-#   def rollover
-#     puts '*rolls over*'
-#   end
+  def rollover
+    puts '*rolls over*'
+  end
 
-#   def dog_years(age)
-#     puts age.to_i * 7
-#   end
+  def dog_years(age)
+    puts age.to_i * 7
+  end
 
-#   def play_dead
-#     puts '**plays dead**'
-#   end
+  def play_dead
+    puts '**plays dead**'
+  end
 
-# end
+end
 
 
-# puppy = Puppy.new
+puppy = Puppy.new
 
-# puppy.fetch('ball')
+puppy.fetch('ball')
 
-# puppy.speak(5)
+puppy.speak(5)
 
-# puppy.rollover
+puppy.rollover
 
-# puppy.dog_years(7)
+puppy.dog_years(7)
 
-# puppy.play_dead
+puppy.play_dead
 
 class Party_planning
 
