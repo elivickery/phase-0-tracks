@@ -9,8 +9,7 @@
 
 class Game
 
-    attr_reader :word
-    attr_accessor: :blanks_array
+    attr_accessor :word, :blanks_array
 
     def initialize(word)
         @word = word
@@ -19,12 +18,14 @@ class Game
 
 # Method: generate array from word
     def generate_word_array
-        @word.chars
+        @word = @word.chars
     end
 
 # Method: generate an array of blanks
     def generate_blanks_array
-        Array.new(@word.length,'_')
+        @word.length.times do
+            @blanks_array << '_'
+        end
     end
 
 # Method: check if guessed letter is in the word
@@ -42,9 +43,9 @@ class Game
         @word == @blanks_array
     end
 
-# Method: print array
-    def print_array(array)
-        array.join(' ')
+# Method: print blanks array in a readable way
+    def print_blanks_array
+        @blanks_array.join(' ')
     end
 
 end
