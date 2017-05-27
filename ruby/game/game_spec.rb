@@ -21,4 +21,25 @@ it "generates an array of blanks" do
   expect(game.blanks_array).to eq ['_','_','_','_','_','_']
 end
 
+it "checks if letter is in the word" do
+  expect(game.check_if_in_word('p')).to eq true
+end
+
+it "adds the letter to the blanks array" do
+  game.add_to_blanks_array('p')
+  expect(game.blanks_array).to eq ['p']
+end
+
+it "checks if the word has been guessed" do
+  game.generate_word_array
+  game.blanks_array = ['p','o','t','a','t','o']
+  expect(game.word_has_been_guessed).to eq true
+end
+
+it "prints the blanks array in a readable way" do
+  game.generate_word_array
+  game.generate_blanks_array
+  expect(game.print_blanks_array).to eq '_ _ _ _ _ _'
+end
+
 end

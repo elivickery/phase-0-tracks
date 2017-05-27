@@ -40,7 +40,11 @@ class Game
 
 # Method: check if word has been guessed
     def word_has_been_guessed
-        @word == @blanks_array
+        if @word == @blanks_array
+            true
+        else
+            false
+        end
     end
 
 # Method: print blanks array in a readable way
