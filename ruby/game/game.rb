@@ -51,8 +51,6 @@ class Game
         end
     end
 
-
-
 # Method: add letter to blanks array
     def add_to_blanks_array(letter)
         @blanks_array[@word.index(letter)] = letter
@@ -87,6 +85,7 @@ class Game
     end
 
 end
+
 
 ## User Interface
 
@@ -130,12 +129,3 @@ loop do
     end
 
 end
-
-
-
-
-
-
-
-
-
