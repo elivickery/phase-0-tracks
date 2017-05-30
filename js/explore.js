@@ -10,22 +10,22 @@
 
 function reverseString(string) {
 
-    new_string = ''
+    new_string = '';
 
     for (var i = string.length - 1; i >= 0; i -= 1) {
-        new_string += string[i]
+        new_string += string[i];
     }
 
-    console.log(new_string)
+    console.log(new_string);
 
 }
 
 
-reverseString('hello world!')
+reverseString('hello world!');
 
-var hello = "hello"
-var goodbye = "goodbye"
+var hello = "hello";
+var goodbye = "goodbye";
 
 if (hello != goodbye) {
-    console.log("It's true!")
+    console.log("It's true!");
 }
