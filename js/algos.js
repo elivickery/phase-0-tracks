@@ -5,12 +5,7 @@
     // For through each item in the array
         // Loop through all items and compare item length to length of longestString
         // If item is longer than longestString, reassign longestString = item
-
-var test_array = ["long phrase","longest phrase","longer phrase"];
-
-var test_array_2 = ["hello","hello world","hello cruel world","goodbye cruel world"];
-
-var test_array_3 = ["123","1234","1","12345","123456"];
+    Return longestString
 
 function findLongest(array) {
 
@@ -27,8 +22,15 @@ function findLongest(array) {
 
 }
 
-console.log(findLongest(test_array));
+var testArray = ["long phrase","longest phrase","longer phrase"];
 
-console.log(findLongest(test_array_2));
+var testArray2 = ["hello","hello world","hello cruel world","goodbye cruel world"];
 
-console.log(findLongest(test_array_3));
+var testArray3 = ["123","1234","1","12345","123456"];
+
+console.log(findLongest(testArray));
+
+console.log(findLongest(testArray2));
+
+console.log(findLongest(testArray3));
+
