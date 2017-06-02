@@ -7,20 +7,20 @@
         // If item is longer than longestString, reassign longestString = item
     // Return longestString
 
-// function findLongest(array) {
+function findLongest(array) {
 
-//     var longestString = "";
+    var longestString = "";
 
-//     for(var i = 0; i < array.length; i++) {
+    for(var i = 0; i < array.length; i++) {
 
-//         if(array[i].length > longestString.length) {
-//             longestString = array[i];
-//         }
-//     }
+        if(array[i].length > longestString.length) {
+            longestString = array[i];
+        }
+    }
 
-//     return(longestString);
+    return(longestString);
 
-// }
+}
 
 // var testArray = ["long phrase","longest phrase","longer phrase"];
 
@@ -47,21 +47,21 @@
     // Return the result variable
 
 
-// function checkForTwins(object1, object2) {
+function checkForTwins(object1, object2) {
 
-//     var result = false;
+    var result = false;
 
-//     for(var key1 in object1) {
+    for(var key1 in object1) {
 
-//         for(var key2 in object2 ) {
-//             if (key1 == key2 && object1[key1] == object2[key2]) {
-//                 result = true;
-//             }
-//         }
-//     }
+        for(var key2 in object2 ) {
+            if (key1 == key2 && object1[key1] == object2[key2]) {
+                result = true;
+            }
+        }
+    }
 
-//     return(result);
-// }
+    return(result);
+}
 
 
 // testObject1 = {name: "Steven", age: 54};
@@ -115,4 +115,20 @@ function randomStringArray(arrayLength) {
     return(stringArray);
 }
 
-console.log(randomStringArray(5));
+// console.log(randomStringArray(10));
+
+
+// Driver Code
+
+for(var i = 0; i < 11; i++) {
+    var randomLength = Math.floor((Math.random())*(10))+1;
+
+    var randomArray = randomStringArray(randomLength);
+
+    console.log('Random array: ' + randomArray);
+
+    console.log('Longest item in the array: ' + findLongest(randomArray));
+
+    console.log('---------------');
+
+}
