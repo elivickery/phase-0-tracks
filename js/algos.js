@@ -47,37 +47,48 @@
     // Return the result variable
 
 
-function checkForTwins(object1, object2) {
+// function checkForTwins(object1, object2) {
 
-    var result = false;
+//     var result = false;
 
-    for(var key1 in object1) {
+//     for(var key1 in object1) {
 
-        for(var key2 in object2 ) {
-            if (key1 == key2 && object1[key1] == object2[key2]) {
-                result = true;
-            }
-        }
-    }
+//         for(var key2 in object2 ) {
+//             if (key1 == key2 && object1[key1] == object2[key2]) {
+//                 result = true;
+//             }
+//         }
+//     }
 
-    return(result);
-}
+//     return(result);
+// }
 
 
-testObject1 = {name: "Steven", age: 54};
+// testObject1 = {name: "Steven", age: 54};
 
-testObject2 = {name: "Tamir", age: 54};
+// testObject2 = {name: "Tamir", age: 54};
 
-testObject3 = {animal: "Dog", legs: 4};
+// testObject3 = {animal: "Dog", legs: 4};
 
-testObject4 = {animal: "Dog", legs: 3};
+// testObject4 = {animal: "Dog", legs: 3};
 
-console.log(checkForTwins(testObject1, testObject2));
+// console.log(checkForTwins(testObject1, testObject2));
 
-console.log(checkForTwins(testObject3, testObject4));
+// console.log(checkForTwins(testObject3, testObject4));
 
-console.log(checkForTwins(testObject1, testObject3));
+// console.log(checkForTwins(testObject1, testObject3));
 
-console.log(checkForTwins(testObject2, testObject4));
+// console.log(checkForTwins(testObject2, testObject4));
 
+// ---------------------------
+
+// Method: Generate an array of random strings
+// Input: integer value
+// Steps:
+    // Create an empty array
+    // Run a loop as many times as the integer value parameter:
+        // Generate a random number
+        // Generate a string of random numbers with length = the random number
+        // Add to the array
+    // Return the array
 
