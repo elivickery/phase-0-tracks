@@ -92,3 +92,27 @@
         // Add to the array
     // Return the array
 
+function randomStringArray(arrayLength) {
+
+    var stringArray = [];
+    var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+
+    for(var i = 0; i < arrayLength; i++) {
+
+        var itemLength = Math.floor((Math.random())*(10))+1;
+
+        var item = '';
+
+        for(var j = 0; j < itemLength; j++) {
+            var letter = alphabet[Math.floor(Math.random() * itemLength)+1];
+            item += letter;
+        }
+
+        stringArray.push(item);
+
+    }
+
+    return(stringArray);
+}
+
+console.log(randomStringArray(5));
