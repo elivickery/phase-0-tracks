@@ -43,7 +43,34 @@
     // Set a variable 'result' equal to false
     // For each key-value pair in object1
         // Loop through each key-value pair in object2
-            // If object1 key-value pair == object2 key-value pair, set result equal to true
+            // If object1 key == object2 key and object1 value == object2 value, set result equal to true
     // Return the result variable
+
+
+function checkForTwins(object1, object2) {
+
+    var result = false;
+
+    for(var key1 in object1) {
+
+        for(var key2 in object2 ) {
+            if (key1 == key2 && object1[key1] == object2[key2]) {
+                result = true;
+            }
+        }
+    }
+
+    return(result);
+}
+
+
+testObject1 = {name: "Steven", age: 54};
+
+testObject2 = {name: "Tamir", age: 54};
+
+
+console.log(checkForTwins(testObject1, testObject2));
+
+
 
 
