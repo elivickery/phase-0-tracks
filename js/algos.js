@@ -8,6 +8,10 @@
 
 var test_array = ["long phrase","longest phrase","longer phrase"];
 
+var test_array_2 = ["hello","hello world","hello cruel world","goodbye cruel world"];
+
+var test_array_3 = ["123","1234","1","12345","123456"];
+
 function findLongest(array) {
 
     var longestString = "";
@@ -24,3 +28,7 @@ function findLongest(array) {
 }
 
 console.log(findLongest(test_array));
+
+console.log(findLongest(test_array_2));
+
+console.log(findLongest(test_array_3));
