@@ -68,9 +68,16 @@ testObject1 = {name: "Steven", age: 54};
 
 testObject2 = {name: "Tamir", age: 54};
 
+testObject3 = {animal: "Dog", legs: 4};
+
+testObject4 = {animal: "Dog", legs: 3};
 
 console.log(checkForTwins(testObject1, testObject2));
 
+console.log(checkForTwins(testObject3, testObject4));
 
+console.log(checkForTwins(testObject1, testObject3));
+
+console.log(checkForTwins(testObject2, testObject4));
 
 
