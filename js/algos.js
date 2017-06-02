@@ -5,7 +5,7 @@
     // For through each item in the array
         // Loop through all items and compare item length to length of longestString
         // If item is longer than longestString, reassign longestString = item
-    Return longestString
+    // Return longestString
 
 function findLongest(array) {
 
