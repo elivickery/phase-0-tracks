@@ -1,11 +1,11 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge with Aji (guide) and Tyler.
+# We spent about 1.5 hours on this GPS.
 
 # EXPLANATION OF require_relative
 # Includes the data file relative to the current file (a hash of population density and population for each US state)
-#
+
 require_relative 'state_data'
 
 class VirusPredictor
@@ -118,3 +118,16 @@ end
 
 #=======================================================================
 # Reflection Section
+
+## - What are the differences between the two different hash syntaxes shown in the state_data file?
+# The first (parent) hash uses strings as keys with hashes as the values. The inner nested hash uses symbols as keys and integers as values.
+## - What does require_relative do? How is it different from require?
+# Require_relative allows you to load a file that is relative to the file containing the statement.
+# With require, ../ indicates a path that is relative to your current working directory.
+## - What are some ways to iterate through a hash?
+# .each do |key, value|, .each_key do |key|, .each_value do |value|
+## - When refactoring virus_effects, what stood out to you about the variables, if anything?
+# It's important to focus on the variables that are actually needed/used to make sure nothing extra or unneccessary is being included.
+## - What concept did you most solidify in this challenge?
+# This challenge really helped me understand how to refactor a method with a loop to minimize lines of code and make it simpler.
+
