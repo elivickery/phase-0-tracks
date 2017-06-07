@@ -55,3 +55,62 @@ Sweet potatoes|Organic Naturals
 
 DELETE FROM inventory WHERE item="Oreos";
 
+--------
+
+SELECT inventory.item, inventory.stock, stores.name FROM inventory INNER JOIN stores ON inventory.store_id = stores.id;
+
+Apples|200|Organic Naturals
+Oranges|150|ABC Store
+Grapes|250|Organic Naturals
+Potatoes|150|Big Q Mart
+Chocolate chip cookies|100|Big Q Mart
+Coffee beans|200|ABC Store
+Pop tarts|150|Big Q Mart
+Chips|100|Big Q Mart
+Sweet potatoes|150|Organic Naturals
+
+--------
+
+SELECT inventory.item, inventory.stock, stores.name FROM inventory LEFT OUTER JOIN stores ON inventory.store_id = stores.id;
+
+Apples|200|Organic Naturals
+Oranges|150|ABC Store
+Grapes|250|Organic Naturals
+Potatoes|150|Big Q Mart
+Chocolate chip cookies|100|Big Q Mart
+Coffee beans|200|ABC Store
+Pop tarts|150|Big Q Mart
+Chips|100|Big Q Mart
+Sweet potatoes|150|Organic Naturals
+
+--------
+
+SELECT * FROM inventory CROSS JOIN stores;
+
+1|Apples|200|1|1|1|Organic Naturals
+1|Apples|200|1|1|2|Big Q Mart
+1|Apples|200|1|1|3|ABC Store
+2|Oranges|150|1|3|1|Organic Naturals
+2|Oranges|150|1|3|2|Big Q Mart
+2|Oranges|150|1|3|3|ABC Store
+3|Grapes|250|1|1|1|Organic Naturals
+3|Grapes|250|1|1|2|Big Q Mart
+3|Grapes|250|1|1|3|ABC Store
+4|Potatoes|150|0|2|1|Organic Naturals
+4|Potatoes|150|0|2|2|Big Q Mart
+4|Potatoes|150|0|2|3|ABC Store
+6|Chocolate chip cookies|100|0|2|1|Organic Naturals
+6|Chocolate chip cookies|100|0|2|2|Big Q Mart
+6|Chocolate chip cookies|100|0|2|3|ABC Store
+7|Coffee beans|200|1|3|1|Organic Naturals
+7|Coffee beans|200|1|3|2|Big Q Mart
+7|Coffee beans|200|1|3|3|ABC Store
+8|Pop tarts|150|0|2|1|Organic Naturals
+8|Pop tarts|150|0|2|2|Big Q Mart
+8|Pop tarts|150|0|2|3|ABC Store
+9|Chips|100|0|2|1|Organic Naturals
+9|Chips|100|0|2|2|Big Q Mart
+9|Chips|100|0|2|3|ABC Store
+10|Sweet potatoes|150|1|1|1|Organic Naturals
+10|Sweet potatoes|150|1|1|2|Big Q Mart
+10|Sweet potatoes|150|1|1|3|ABC Store
