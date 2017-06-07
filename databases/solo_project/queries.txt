@@ -1,0 +1,57 @@
+.tables
+
+inventory  stores
+
+--------
+
+SELECT * FROM inventory;
+
+1|Apples|200|1|1
+2|Oranges|150|0|3
+3|Grapes|250|1|1
+4|Potatoes|150|0|2
+5|Oreos|100|0|3
+6|Chocolate chip cookies|100|0|2
+7|Coffee beans|200|1|3
+8|Pop tarts|150|0|2
+9|Chips|100|0|2
+10|Sweet potatoes|150|1|1
+
+--------
+
+UPDATE inventory SET organic="1" WHERE id="2";
+
+--------
+
+SELECT * from inventory, stores WHERE inventory.store_id = stores.id;
+
+1|Apples|200|1|1|1|Organic Naturals
+2|Oranges|150|1|3|3|ABC Store
+3|Grapes|250|1|1|1|Organic Naturals
+4|Potatoes|150|0|2|2|Big Q Mart
+5|Oreos|100|0|3|3|ABC Store
+6|Chocolate chip cookies|100|0|2|2|Big Q Mart
+7|Coffee beans|200|1|3|3|ABC Store
+8|Pop tarts|150|0|2|2|Big Q Mart
+9|Chips|100|0|2|2|Big Q Mart
+10|Sweet potatoes|150|1|1|1|Organic Naturals
+
+--------
+
+SELECT inventory.item, stores.name FROM inventory JOIN stores ON inventory.store_id = stores.id;
+
+Apples|Organic Naturals
+Oranges|ABC Store
+Grapes|Organic Naturals
+Potatoes|Big Q Mart
+Oreos|ABC Store
+Chocolate chip cookies|Big Q Mart
+Coffee beans|ABC Store
+Pop tarts|Big Q Mart
+Chips|Big Q Mart
+Sweet potatoes|Organic Naturals
+
+--------
+
+DELETE FROM inventory WHERE item="Oreos";
+
