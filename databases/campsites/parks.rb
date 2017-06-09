@@ -59,6 +59,7 @@ end
 insert_into_table(parks_data, 'parks', parks_db)
 insert_into_table(states_data, 'states', parks_db)
 
+
 # list all items in campsite table
 def show_campsites(db, table)
     campsites = db.execute("SELECT campsites.name, parks.name, states.name FROM campsites LEFT JOIN parks ON campsites.park_id=parks.id LEFT JOIN states ON campsites.state_id=states.id")
@@ -85,5 +86,36 @@ end
 def delete_campsite(db, table)
     puts "Enter the name of the campsite you want to delete:"
     campsite = gets.chomp
-    db.execute("DELETE FROM #{table} WHERE name='#{campsite}')
+    db.execute("DELETE FROM #{table} WHERE name='#{campsite}'")
 end
+
+
+## User interface
+loop do
+    puts "
+    ---------------------
+    What do you want to do? Enter a number or type 'exit':
+    1. View the list
+    2. Add an item
+    3. Delete an item
+    ---------------------"
+
+    user_choice = gets.chomp
+
+    if user_choice == 'exit'
+        break
+    elsif user_choice == '1'
+        show_campsites(parks_db, 'campsites')
+    elsif user_choice == '2'
+        add_new_campsite(parks_db, 'campsites')
+        show_campsites(parks_db, 'campsites')
+    elsif user_choice == '3'
+        delete_campsite(parks_db, 'campsites')
+        show_campsites(parks_db, 'campsites')
+    else
+        puts 'Not a valid option, try again.'
+    end
+
+end
+
+
