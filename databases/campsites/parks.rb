@@ -115,7 +115,6 @@ loop do
     else
         puts 'Not a valid option, try again.'
     end
-
 end
 
 
