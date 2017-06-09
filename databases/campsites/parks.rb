@@ -81,4 +81,9 @@ def add_new_campsite(db, table)
     db.execute("INSERT INTO #{table} (name, park_id, state_id) VALUES ('#{campsite_name}', '#{park_id}', '#{state_id}') ")
 end
 
-
+# add a new item to campsite list
+def delete_campsite(db, table)
+    puts "Enter the name of the campsite you want to delete:"
+    campsite = gets.chomp
+    db.execute("DELETE FROM #{table} WHERE name='#{campsite}')
+end
