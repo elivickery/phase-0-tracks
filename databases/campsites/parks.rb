@@ -24,6 +24,8 @@ create_campsite_table = <<-SQL
     name VARCHAR(255),
     park_id INTEGER,
     state_id INTEGER,
+    stars INTEGER,
+    review VARCHAR(255),
     FOREIGN KEY (park_id) REFERENCES parks(id),
     FOREIGN KEY (state_id) REFERENCES states(id)
   )
@@ -59,14 +61,17 @@ end
 insert_into_table(parks_data, 'parks', parks_db)
 insert_into_table(states_data, 'states', parks_db)
 
-
 # list all items in campsite table
 def show_campsites(db, table)
-    campsites = db.execute("SELECT campsites.name, parks.name, states.name FROM campsites LEFT JOIN parks ON campsites.park_id=parks.id LEFT JOIN states ON campsites.state_id=states.id")
+    campsites = db.execute("SELECT campsites.name, parks.name, states.name, campsites.stars, campsites.review FROM campsites LEFT JOIN parks ON campsites.park_id=parks.id LEFT JOIN states ON campsites.state_id=states.id")
 
-    campsites.each do |campsite|
-        puts "--------------------------------------------------------------------"
-        puts "#{campsite[0]} | #{campsite[1]} | #{campsite[2]}"
+    if campsites.length > 0
+        campsites.each do |campsite|
+            puts "--------------------------------------------------------------------"
+            puts " #{campsite[0]} | #{campsite[1]} | #{campsite[2]} | #{campsite[3]} stars | #{campsite[4]}"
+        end
+    else
+        puts "No items in database."
     end
 end
 
@@ -78,17 +83,40 @@ def add_new_campsite(db, table)
     park_id = gets.chomp
     puts "Enter state ID:"
     state_id = gets.chomp
+    puts "Enter star rating (1-5):"
+    stars = gets.chomp
+    puts "Enter a brief review:"
+    review = gets.chomp
 
-    db.execute("INSERT INTO #{table} (name, park_id, state_id) VALUES ('#{campsite_name}', '#{park_id}', '#{state_id}') ")
+    db.execute("INSERT INTO #{table} (name, park_id, state_id, stars, review) VALUES ('#{campsite_name}', '#{park_id}', '#{state_id}', '#{stars}', '#{review}') ")
 end
 
-# add a new item to campsite list
+# delete item from campsite list
 def delete_campsite(db, table)
     puts "Enter the name of the campsite you want to delete:"
     campsite = gets.chomp
     db.execute("DELETE FROM #{table} WHERE name='#{campsite}'")
 end
 
+
+# Search by stars
+def search_by_stars(db, table)
+    puts "SEARCH BY RATING"
+    puts "Only show campsites with this many stars (1-5):"
+    rating = gets.chomp.to_s
+
+    campsites = db.execute("SELECT campsites.name, parks.name, states.name, campsites.stars, campsites.review FROM campsites LEFT JOIN parks ON campsites.park_id=parks.id LEFT JOIN states ON campsites.state_id=states.id WHERE campsites.stars='#{rating}'")
+
+    if campsites.length > 0
+        campsites.each do |campsite|
+            puts "--------------------------------------------------------------------"
+            puts " #{campsite[0]} | #{campsite[1]} | #{campsite[2]} | #{campsite[3]} stars | #{campsite[4]}"
+        end
+    else
+        puts "No matching items in database, try again."
+    end
+
+end
 
 ## User interface
 loop do
@@ -98,9 +126,10 @@ loop do
     1. View the list
     2. Add an item
     3. Delete an item
+    4. Search by rating
     ---------------------"
 
-    user_choice = gets.chomp
+    user_choice = gets.chomp.to_s
 
     if user_choice == 'exit'
         break
@@ -112,9 +141,12 @@ loop do
     elsif user_choice == '3'
         delete_campsite(parks_db, 'campsites')
         show_campsites(parks_db, 'campsites')
+    elsif user_choice == '4'
+        search_by_stars(parks_db, 'campsites')
     else
         puts 'Not a valid option, try again.'
     end
+
 end
 
 
