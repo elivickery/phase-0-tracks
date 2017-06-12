@@ -6,11 +6,11 @@ Linux is open-source and the creators of the Linux OS feel that it's important t
 
 # What is a VPS (virtual private server)?
 
-A VPS is a Virtual Private Server - it's basically a hosting environment that mimics a dedicated server within a shared hosting environment.
+A VPS is basically a physical server environment that is partitioned into different containers, each of which functions as a separate server with its own specifications and requirements.
 
 # What are the advantages of using a VPS?
 
-A VPS is more flexible than shared hosting because you can set the specifications of the server (memory and bandwidth allocation, operating system, etc.)
+Since a VPS is partitioned into different separate servers, you can switch between the different environments without worrying about side effects or accidentally breaking an environment.
 
 # Why is it considered a bad idea to run programs as the root user on a Linux system?
 
