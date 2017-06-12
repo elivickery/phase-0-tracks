@@ -1,6 +1,6 @@
 ## CAMPSITE DATABASE
 # A Ruby project that incorporates data pulled from CSV's of national park and state names.
-# Users can add to / modify a database of campsites they have visited in national parks, including ratings and reviews.
+# Users can add to or modify a database of campsites they have visited in national parks, including ratings and reviews.
 
 # require gems
 require 'sqlite3'
