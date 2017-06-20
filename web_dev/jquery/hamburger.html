@@ -2,8 +2,57 @@
 <html>
 <head>
     <title>Build Your Own Hamburger</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="scripts.js"></script>js
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body>
+
+    <div id="hamburger">
+
+        <div id="top" class="bun"></div>
+
+        <div id="lettuce"></div>
+
+        <div id="tomato"></div>
+
+        <div id="cheese"></div>
+
+        <div id="burger"></div>
+
+        <div id="bottom" class="bun"></div>
+
+    </div>
+
+    <div id="options">
+
+        <form action="/">
+            <label>Bun</label>
+            <input type="radio" name="bun" value="regular"> Regular Bun<br>
+            <input type="radio" name="bun" value="wheat"> Whole Wheat Bun<br>
+            <input type="radio" name="bun" value="none"> No Bun
+
+            <label>Burger</label>
+            <input type="radio" name="burger" value="regular"> Regular Burger<br>
+            <input type="radio" name="burger" value="turkey"> Turkey Burger<br>
+            <input type="radio" name="burger" value="veggie"> Veggie Burger
+
+            <label>Cheese</label>
+            <input type="radio" name="cheese" value="cheddar"> Cheddar<br>
+            <input type="radio" name="cheese" value="turkey"> Swiss<br>
+            <input type="radio" name="cheese" value="none"> No Cheese
+
+            <label>Lettuce</label>
+            <input type="radio" name="lettuce" value="yes"> Lettuce<br>
+            <input type="radio" name="lettuce" value="no"> No Lettuce<br>
+
+            <label>Tomato</label>
+            <input type="radio" name="tomato" value="yes"> Tomato<br>
+            <input type="radio" name="tomato" value="no"> No Tomato<br>
+
+        </form>
+
+    </div>
 
 </body>
 </html>
