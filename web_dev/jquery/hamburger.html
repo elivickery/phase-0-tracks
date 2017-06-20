@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Build Your Own Hamburger</title>
+    <title>Build Your Own Burger</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="scripts.js"></script>js
+    <script src="scripts.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
 
     <div id="hamburger">
 
+        <h1>Build Your Own Burger</h1>
+
         <div id="top" class="bun"></div>
 
         <div id="lettuce"></div>
 
-        <div id="tomato"></div>
+        <div id="tomato">
+            <div class="slice"></div>
+            <div class="slice"></div>
+            <div class="slice"></div>
+        </div>
 
         <div id="cheese"></div>
 
@@ -27,26 +34,26 @@
     <div id="options">
 
         <form action="/">
-            <label>Bun</label>
+            <h2>Bun</h2>
             <input type="radio" name="bun" value="regular"> Regular Bun<br>
             <input type="radio" name="bun" value="wheat"> Whole Wheat Bun<br>
             <input type="radio" name="bun" value="none"> No Bun
 
-            <label>Burger</label>
+            <h2>Burger</h2>
             <input type="radio" name="burger" value="regular"> Regular Burger<br>
             <input type="radio" name="burger" value="turkey"> Turkey Burger<br>
             <input type="radio" name="burger" value="veggie"> Veggie Burger
 
-            <label>Cheese</label>
+            <h2>Cheese</h2>
             <input type="radio" name="cheese" value="cheddar"> Cheddar<br>
             <input type="radio" name="cheese" value="turkey"> Swiss<br>
             <input type="radio" name="cheese" value="none"> No Cheese
 
-            <label>Lettuce</label>
+            <h2>Lettuce</h2>
             <input type="radio" name="lettuce" value="yes"> Lettuce<br>
             <input type="radio" name="lettuce" value="no"> No Lettuce<br>
 
-            <label>Tomato</label>
+            <h2>Tomato</h2>
             <input type="radio" name="tomato" value="yes"> Tomato<br>
             <input type="radio" name="tomato" value="no"> No Tomato<br>
 
